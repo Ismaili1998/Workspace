@@ -30,6 +30,9 @@ for file in "$DOWNLOADS"/*; do
             *.mp4|*.avi)
                 mv "$file" "$VIDEOS"
                 ;;
+            *.zip|*.tar|*.rar)
+                mv "$file" "$ARCHIVES"
+                ;;
         esac
     fi
 done
