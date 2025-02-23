@@ -16,3 +16,16 @@ mkdir -p "$IMAGES"
 mkdir -p "$VIDEOS"
 mkdir -p "$ARCHIVES"
 mkdir -p "$MUSIC"
+
+# Déplacer les fichiers dans les dossiers appropriés
+for file in "$DOWNLOADS"/*; do
+    if [ -f "$file" ]; then
+        case "$file" in
+            *.pdf|*.docx|*.txt|*.xlsx|*.pptx)
+                mv "$file" "$DOCUMENTS"
+                ;;
+        esac
+    fi
+done
+
+echo "Organisation des fichiers terminée."
