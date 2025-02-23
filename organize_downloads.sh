@@ -24,6 +24,9 @@ for file in "$DOWNLOADS"/*; do
             *.pdf|*.docx|*.txt|*.xlsx|*.pptx)
                 mv "$file" "$DOCUMENTS"
                 ;;
+            *.jpg|*.png|*.gif)
+                mv "$file" "$IMAGES"
+                ;;
         esac
     fi
 done
