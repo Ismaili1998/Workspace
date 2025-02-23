@@ -27,6 +27,9 @@ for file in "$DOWNLOADS"/*; do
             *.jpg|*.png|*.gif)
                 mv "$file" "$IMAGES"
                 ;;
+            *.mp4|*.avi)
+                mv "$file" "$VIDEOS"
+                ;;
         esac
     fi
 done
