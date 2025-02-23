@@ -33,6 +33,9 @@ for file in "$DOWNLOADS"/*; do
             *.zip|*.tar|*.rar)
                 mv "$file" "$ARCHIVES"
                 ;;
+            *.mp3|*.wav)
+                mv "$file" "$MUSIC"
+                ;;
         esac
     fi
 done
