@@ -26,6 +26,9 @@ for file in "$DOWNLOADS"/*; do
       elif [[ "$ext" == "zip" || "$ext" == "tar" || "$ext" == "gz" || "$ext" == "rar" ]]; then
       mv "$file" "$ARCHIVES/$name"
       echo "Déplacé $name vers Archives"
+      elif [[ "$ext" == "pdf" || "$ext" == "doc" || "$ext" == "docx" || "$ext" == "txt" ]]; then
+      mv "$file" "$DOCUMENTS/$name"
+      echo "Déplacé $name vers Documents"
     fi
   fi
 done
