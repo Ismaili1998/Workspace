@@ -29,6 +29,10 @@ for file in "$DOWNLOADS"/*; do
       elif [[ "$ext" == "pdf" || "$ext" == "doc" || "$ext" == "docx" || "$ext" == "txt" ]]; then
       mv "$file" "$DOCUMENTS/$name"
       echo "Déplacé $name vers Documents"
+      elif [[ "$ext" == "mp4" || "$ext" == "avi" || "$ext" == "mkv" || "$ext" == "mov" ]]; then
+      mv "$file" "$VIDEOS/$name"
+      echo "Déplacé $name vers Vidéos"
     fi
   fi
 done
+echo "L'organisation des fichiers du dossier Téléchargemets a été effectuée"
