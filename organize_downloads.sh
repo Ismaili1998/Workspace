@@ -23,6 +23,9 @@ for file in "$DOWNLOADS"/*; do
     if [[ "$ext" == "jpg" || "$ext" == "jpeg" || "$ext" == "png" || "$ext" == "gif" ]]; then
       mv "$file" "$IMAGES/$name"
       echo "Déplacé $name vers Images"
+      elif [[ "$ext" == "zip" || "$ext" == "tar" || "$ext" == "gz" || "$ext" == "rar" ]]; then
+      mv "$file" "$ARCHIVES/$name"
+      echo "Déplacé $name vers Archives"
     fi
   fi
 done
