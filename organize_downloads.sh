@@ -33,3 +33,5 @@ find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname ".txt" \)
 #migration des fichiers tar/archives:
 find $DOWNLOADS -type f \( -iname "*.zip" -o -iname "*.tar.gz" \) -exec mv {} "./$fololder_archives/" \;
 
+#Un commit pour l'ajout du scheduling du script**:
+find $DOWNLOADS -type f \( -iname "*.cronjob" -o -iname "*.systemd" \) -exec mv {} "./$liste_folders/" \;
