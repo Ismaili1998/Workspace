@@ -24,9 +24,12 @@ else mkdir $currend_forder
 fi 
 done 
  
-#migration des photos 
+#migration des photos:
 find $DOWNLOADS -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec mv {} "./$folder_image/" \;
 
-#migration des fichiers docs
+#migration des fichiers docs:
 find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname ".txt" \) -exec mv {} "./$folder_documents/" \;
+
+#migration des fichiers tar/archives:
+find $DOWNLOADS -type f \( -iname "*.zip" -o -iname "*.tar.gz" \) -exec mv {} "./$fololder_archives/" \;
 
