@@ -24,5 +24,9 @@ else mkdir $currend_forder
 fi 
 done 
  
-
+#migration des photos 
 find $DOWNLOADS -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec mv {} "./$folder_image/" \;
+
+#migration des fichiers docs
+find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname ".txt" \) -exec mv {} "./$folder_documents/" \;
+
