@@ -20,13 +20,13 @@ list_video=($download/*.mp4 $download/*.flv $download/*.mov)
 list_archive=($download/*.zip $download/*.tar $download/*.rar)
 list_documents=($download/*.pdf $download/*.docx $download/*.txt)
 
-for file in ${list_archive[@]}; do
+#for file in ${list_archive[@]}; do
     if [ -f "$file" ]; then
        mv $file $archive
        echo "Mouving $file to $download has been done successfully"
     fi
-done
-#for file in ${list_documents[@]}; do
+#done
+for file in ${list_documents[@]}; do
     if [ -f "$file" ]; then
     mv $file $documents
     echo "Mouving $file to $download has been done successfully"    
