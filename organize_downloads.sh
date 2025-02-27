@@ -26,19 +26,19 @@ list_documents=($download/*.pdf $download/*.docx $download/*.txt)
        echo "Mouving $file to $download has been done successfully"
     fi
 #done
-for file in ${list_documents[@]}; do
+#for file in ${list_documents[@]}; do
     if [ -f "$file" ]; then
     mv $file $documents
     echo "Mouving $file to $download has been done successfully"    
     fi
 #done
-for file in ${list_image[@]}; do
+#for file in ${list_image[@]}; do
     if [ -f "$file" ]; then
     mv $file $image
     echo "Mouving $file to $download has been done successfully"
     fi
-done
-#for file in ${list_video[@]}; do
+#done
+for file in ${list_video[@]}; do
     if [ -f "$file" ]; then
     mv $file $video
     echo "Mouving $file to $download has been done successfully"
