@@ -31,8 +31,8 @@ for file in ${list_documents[@]}; do
     mv $file $documents
     echo "Mouving $file to $download has been done successfully"    
     fi
-done
-#for file in ${list_image[@]}; do
+#done
+for file in ${list_image[@]}; do
     if [ -f "$file" ]; then
     mv $file $image
     echo "Mouving $file to $download has been done successfully"
