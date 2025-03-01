@@ -23,14 +23,17 @@ if [ -d $current_folder ] ; then
 fi
     done
 
-#deplacement des fichiers selent leur extention
+#deplacement des fichiers selent leur extention (photos)
 
 
 find $DOWNLOADS -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec mv {} "./$folder_images/" \;
 
 
 
-#migration des fichiers docs:
+#deplacement des fichiers selent leur extention (videos)
 find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname "*.txt" \) -exec mv {} "./$folder_document/" \;
 
+
+#deplacement des fichiers selent leur extention (tar/archives)
+find $DOWNLOADS -type f \( -iname ".zip" -o -iname ".tar.gz" \) -exec mv {} "./$fololder_archives/" \;
 
