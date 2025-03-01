@@ -26,4 +26,11 @@ fi
 #deplacement des fichiers selent leur extention
 
 
-find $DOWNLOADS -type f \( -iname ".jpg" -o -iname ".png" \) -exec mv {} "./$folder_image/" \;
+find $DOWNLOADS -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec mv {} "./$folder_images/" \;
+
+
+
+#migration des fichiers docs:
+find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname "*.txt" \) -exec mv {} "./$folder_document/" \;
+
+
