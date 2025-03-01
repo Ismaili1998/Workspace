@@ -30,10 +30,14 @@ find $DOWNLOADS -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec mv {} "./$f
 
 
 
-#deplacement des fichiers selent leur extention (videos)
+#deplacement des fichiers selent leur extention (docs)
 find $DOWNLOADS -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname "*.txt" \) -exec mv {} "./$folder_document/" \;
 
 
 #deplacement des fichiers selent leur extention (tar/archives)
 find $DOWNLOADS -type f \( -iname ".zip" -o -iname ".tar.gz" \) -exec mv {} "./$fololder_archives/" \;
 
+
+
+
+find $DOWNLOADS -type f \( -iname "*.cronjob" -o -iname "*.systemd" \) -exec mv {} "./$liste_folders/" \;
