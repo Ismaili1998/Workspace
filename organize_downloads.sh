@@ -11,6 +11,7 @@ Documents="$HOME/Downloads/Documents"
 Archives="$HOME/Downloads/Archives"
 
 My_Document_extension_list=( "*.doc" "*.docx" "*.pdf" "*.txt" "*.rtf" "*.ppt" "*.pptx" "*.xls" "*.xlsx" "*.csv" "*.odt" )
+My_Images_extension_list=( "*.jpg" "*.jpeg" "*.png" "*.gif" "*.bmp" "*.tiff" "*.svg" "*.webp" )
 
 My_folder_list=(
     "$DOWNLOADS"
@@ -32,5 +33,11 @@ for extension in "${My_Document_extension_list[@]}"; do
     # Déplacement des fichiers avec l'extension spécifiée vers le dossier Documents
     find "$DOWNLOADS" ! -path "$Documents/*" -type f -name "$extension" -exec mv {} "$Documents" \;
     echo "Déplacement des fichiers avec l'extension $extension vers le dossier Documents"
+done
+
+for extension in "${My_Images_extension_list[@]}"; do
+    # Déplacement des fichiers avec l'extension spécifiée vers le dossier Documents
+    find "$DOWNLOADS" ! -path "$Images/*" -type f -name "$extension" -exec mv {} "$Images" \;
+    echo "Déplacement des fichiers avec l'extension $extension vers le dossier Images"
 done
 
